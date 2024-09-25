@@ -1,0 +1,71 @@
+﻿<Window x:Class="ExaminadordeObjetos_DanielAvila.Filtro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExaminadordeObjetos_DanielAvila"
+        mc:Ignorable="d"
+        Title="Filtro" Height="180" Width="325"
+        x:Name="Filtracion" ResizeMode="NoResize">
+    <Window.Resources>
+
+        <Style TargetType="Window" x:Key="light">
+            <Setter Property="Background" Value="#98c5d6"/>
+            <Setter Property="Foreground" Value="#1C2833"/>
+        </Style>
+        <Style TargetType="Window" x:Key="dark">
+            <Setter Property="Background" Value="#1C2833"/>
+            <Setter Property="Foreground" Value="#98c5d6"/>
+        </Style>
+
+
+        <Style TargetType="Label" x:Key="dark_txt">
+            <Setter Property="Foreground" Value="#1C2833"/>
+        </Style>
+        <Style TargetType="Label" x:Key="light_txt">
+            <Setter Property="Foreground" Value="#98c5d6"/>
+        </Style>
+
+        <Style TargetType="RadioButton" x:Key="dark_rd">
+            <Setter Property="Foreground" Value="#1C2833"/>
+        </Style>
+        <Style TargetType="RadioButton" x:Key="light_rd">
+            <Setter Property="Foreground" Value="#98c5d6"/>
+        </Style>
+
+
+        <Style TargetType="RadioButton">
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="light_btn">
+            <Setter Property="Background" Value="#98c5d6"/>
+            <Setter Property="Foreground" Value="#1C2833"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="dark_btn">
+            <Setter Property="Background" Value="#1C2833"/>
+            <Setter Property="Foreground" Value="#98c5d6"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+
+
+    </Window.Resources>
+
+    <StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="radios">
+            <Label FontWeight="SemiBold" FontSize="25" x:Name="titulo" Margin="0 5">Elige</Label>
+            <RadioButton GroupName="filtro" x:Name="reproductor">Reproductor de música</RadioButton>
+            <RadioButton GroupName="filtro" x:Name="visor">Visor de imagenes</RadioButton>
+            <RadioButton GroupName="filtro" x:Name="notas">Visor de texto</RadioButton>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center">
+            <Button Content="Ok" x:Name="Filter" Width="60"  Click="Filter_click" Height="40" />
+
+        </StackPanel>
+    </StackPanel>
+</Window>
